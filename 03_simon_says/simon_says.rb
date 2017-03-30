@@ -31,10 +31,10 @@ def titleize(str)
 	#p str.split.map(&:capitalize).join(" ")
 	str.split.each_with_index.map do |word, index|
 		case 
+		when word == "over"
+			word
 		when index == 0 || word.length > 3
 			word.capitalize 
-		when word == "over" # "into" || "under"
-			word
 		else
 			word
 		end
